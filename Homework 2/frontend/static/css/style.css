@@ -1,0 +1,281 @@
+/*
+    CSS Reset
+    =================================
+    This file contains the CSS reset for the project.
+*/
+
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set default font */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Add some breathing room */
+body {
+  padding: 1rem;
+}
+
+/* Basic styling for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+/* Basic styling for links */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Basic styling for buttons */
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0062cc;
+}
+
+/* Basic styling for forms */
+input, textarea {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Basic layout styles */
+.container {
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.5rem;
+}
+
+.col {
+  flex-basis: 100%;
+  padding: 0.5rem;
+}
+
+/*
+    Custom styles
+*/
+
+.all-content-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1rem;
+}
+
+.content-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.content_data{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.content_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.content-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+
+}
+
+.content-item h3 {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.content-item p{
+    margin-top: 1rem;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: large;
+}
+
+.content-item button{
+    margin-top: 1rem;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.content-item button:hover{
+    background-color: #0062cc;
+}
+
+.content-item hr{
+    width:50%;
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+    margin: 1rem 0;
+
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 1rem;
+}
+
+.dropdown_menu{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.dropdown{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+
+.dropdown option{
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.qr_code{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 1rem;
+}
+
+.qr_code img{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.all-songs{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1rem;
+
+}
+
+.song-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+
+
+/*
+    CSS Responsive
+    =================================
+    This file contains the CSS responsive for the project.
+*/
+
+@media (min-width: 576px) {
+  .col-sm {
+    flex-basis: calc(100% / 12 * 6);
+  }
+}
+
+@media (min-width: 768px) {
+  .col-md {
+    flex-basis: calc(100% / 12 * 8);
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg {
+    flex-basis: calc(100% / 12 * 10);
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-xl {
+    flex-basis: calc(100% / 12 * 12);
+  }
+}

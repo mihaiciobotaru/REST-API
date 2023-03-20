@@ -1,0 +1,10 @@
+<form method="post" action="/dropdown">
+  <label for="dropdown">Select an option:</label>
+  <select name="dropdown" id="dropdown">
+    {% for option in options %}
+    <option value="{{ option }}">{{ option }}</option>
+    {% endfor %}
+  </select>
+  <button type="submit">Submit</button>
+</form>
+

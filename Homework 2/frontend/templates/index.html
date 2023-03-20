@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Database</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Movie Database</h1>
+        </div>
+        <div class="content">
+            <div class="menu">
+                <div id = "searchByQuery">
+                    <h2>Search by query</h2>
+                    <form onsubmit="searchContent()" method="get">
+                        <input type="text" id="search" name="search" placeholder="Search for a movie">
+                        <input type="submit" value="Search">
+                    </form>
+                </div>
+                <div id = "searchByParameters">
+                    <h2>Search by parameters</h2>
+                    <div class = "dropdown_menu">
+                      <select  class="dropdown" id = "mediaSelect" onchange = "moviesSelect()" >
+                          <option>All Content</option>
+                          <option>Movie</option>
+                          <option>TV Show</option>
+                          <option>Person</option>
+                      </select>
+                        <select class="dropdown" id = "timerangeSelect" onchange = "moviesSelect()" >
+                            <option>Last Week</option>
+                            <option>Last 24 Hours</option>
+                      </select>
+                    </div>
+                </div>
+
+
+            </div>
+            <div id="movies"></div>
+            <div id="songs"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="/static/js/movies.js"></script>
+<script src="/static/js/songs.js"></script>
